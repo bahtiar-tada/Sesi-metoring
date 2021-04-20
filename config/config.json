@@ -1,0 +1,38 @@
+{
+  "development": {
+    "username": "bahtiar",
+    "password": "qanita",
+    "database": "test_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "acquire": 30000
+    },
+    "ssl": false
+  },
+  "test": {
+    "username": "bahtiar",
+    "password": "qonita",
+    "database": "test_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "acquire": 30000
+    },
+    "ssl": false
+  },
+  "production": {
+    "username": "bahtiar",
+    "password": "qonita",
+    "database": "test_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "acquire": 30000
+    },
+    "ssl": false
+  }
+}
