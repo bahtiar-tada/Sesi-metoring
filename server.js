@@ -14,7 +14,12 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome nodejs." });
 });
 
+// tugas Ayat
 require("./routes")(app);
+
+// tugas Hadyan
+require("./storeRoutes")(app);
+require("./managerRoutes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
