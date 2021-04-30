@@ -38,12 +38,12 @@ exports.pagination = async (req, res) => {
 		where,
 		include: [
 				{
-                    model: models.Store,
-                    as: 'Store',
-                    required: false,
-                    attributes: {
-                        exclude: ['deletedAt']
-                    },
+          model: models.Store,
+          as: 'Store',
+          required: false,
+          attributes: {
+              exclude: ['deletedAt']
+          },
 				}
 		],
 		attributes: {
@@ -104,16 +104,11 @@ exports.update = (req, res) => {
   Manager.update(req.body, {
     where: { id: id }
   })
-    .then(num => {
-      if (num == 1) {
-        res.send({
-          message: "Manager was updated successfully."
-        });
-      } else {
-        res.send({
-          message: `Cannot update Manager!`
-        });
-      }
+    .then(manager => {
+      res.send({
+        message: "Manager was updated successfully.",
+        manager
+      });
     })
     .catch(err => {
       res.status(500).send({
